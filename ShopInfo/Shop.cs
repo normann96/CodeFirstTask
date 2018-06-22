@@ -1,19 +1,14 @@
-namespace CodeFirstTask
-{
-    using System;
-    using System.Data.Entity;
-    using System.Linq;
+using System.Data.Entity;
 
+namespace ShopInfo
+{
     public class ShopContext : DbContext
     {
-        public ShopContext(string connString) 
+        public ShopContext(string connString = "MyConnection")
             : base(connString)
         {
-        } 
-        public ShopContext()
-            : base("MyConnection")
-        {
         }
+
 
         static ShopContext()
         {
