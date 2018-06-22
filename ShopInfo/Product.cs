@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CodeFirstTask
+namespace ShopInfo
 {
     public class Product
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 
-namespace CodeFirstTask
+namespace ShopInfo
 {
     class ShopInitializer : DropCreateDatabaseAlways<ShopContext>
     {
