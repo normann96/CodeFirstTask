@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CodeFirstTask
+namespace ShopInfo
 {
     public class Category
     {
         public int Id { get; set; }
-        [MaxLength(15)]
+        [MaxLength(30)]
         public string Name { get; set; }
     }
 }

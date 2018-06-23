@@ -1,15 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CodeFirstTask
+namespace ShopInfo
 {
     public class Product
     {
         public int Id { get; set; }
-        [MaxLength(15)]
+        [MaxLength(30)]
         [Required]
         public string Name { get; set; }
         [Required]
-        public decimal Coast { get; set; }
+        public decimal Cost { get; set; }
         [Required]
         public Category Category { get; set; }
     }
