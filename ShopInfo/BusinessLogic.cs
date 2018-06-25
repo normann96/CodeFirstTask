@@ -6,16 +6,28 @@ using System.Threading.Tasks;
 
 namespace ShopInfo
 {
-    public class BusinessLogic
+    public static class BusinessLogic
     {
+        static readonly ShopContext _context;
+
+        static BusinessLogic()
+        {
+            using (_context = new ShopContext())
+            {
+
+            }
+            
+                
+        }
         public static IEnumerable<Product> GetProductsByCategory(string category)
         {
-            using (var context = new ShopContext())
+           
+            //using (var context = new ShopContext())
             {
-                var query = context.Products.Where(x => x.Category.Name == category);
+                var query = _context.Products.Where(x => x.Category.Name == category);
                 return query.Any()
                     ? query.ToList()
-                    : throw new NullReferenceException("No products with that category!");
+                    : null;
             }
         }
 
@@ -24,7 +36,7 @@ namespace ShopInfo
             using (var context = new ShopContext())
             {
                 var query = context.Providers.Where(x => x.Product.Category.Name == category);
-                return query.Any() ? query.ToList() : throw new NullReferenceException("No providers for this category!");
+                return query.Any() ? query.ToList() : null;
             }
         }
 
@@ -33,7 +45,7 @@ namespace ShopInfo
             using (var context = new ShopContext())
             {
                 var query = context.Providers.Where(x => x.Name == provider).Select(u => u.Product);
-                return query.Any() ? query.ToList() : throw new NullReferenceException("This provider has not products!");
+                return query.Any() ? query.ToList() : null;
             }
         }
 
@@ -42,7 +54,7 @@ namespace ShopInfo
             using (var context = new ShopContext())
             {
                 var query = context.Products.Where(x => x.Cost == cost);
-                return query.Any() ? query.ToList() : throw new NullReferenceException("No products with that cost");
+                return query.Any() ? query.ToList() : null;
             }
         }
 
@@ -52,7 +64,6 @@ namespace ShopInfo
             {
                 decimal max = context.Products.Max(x => x.Cost);
                 var t = context.Products.Select(x => x.Cost);
-                Console.WriteLine("TYPE = " + t.GetType());
                 return context.Products.Where(u => u.Cost == max).ToList();
             }
         }
@@ -71,7 +82,7 @@ namespace ShopInfo
             using (var context = new ShopContext())
             {
                 var query = context.Providers.Where(x => x.City == city).ToList();
-                return query.Any() ? query.ToList() : throw new NullReferenceException("No providers in this city!");
+                return query.Any() ? query.ToList() : null;
             }
         }
     }
