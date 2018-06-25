@@ -6,8 +6,6 @@ namespace Shop.BLL
 {
     public class BusinessLogic : IDisposable
     {
-        // test 2, все сломал блять!
-
         readonly ShopContext _context = new ShopContext();
         public IEnumerable<Product> GetProductsByCategory(string category)
         {
