@@ -14,8 +14,9 @@ namespace CodeFirstTask
         {
             using (ShopContext context = new ShopContext())
             {
-                // Дима под Саниным контролем закоммитил
+                // Дима под Саниным контролем закоммитил2222
 
+                // test 1
 
                 Console.Read();
             }
