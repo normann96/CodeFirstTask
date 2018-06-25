@@ -61,9 +61,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ShopInfo\ShopInfo.csproj">
-      <Project>{43bdc937-f51b-4fb4-be84-3482484862b9}</Project>
-      <Name>ShopInfo</Name>
+    <ProjectReference Include="..\Shop.BLL\Shop.BLL.csproj">
+      <Project>{4f43305b-4be9-47cd-8eab-1fea39d60065}</Project>
+      <Name>Shop.BLL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

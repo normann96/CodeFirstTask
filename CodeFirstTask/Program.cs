@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ShopInfo;
+using Shop.BLL;
 
 namespace CodeFirstTask
 {
@@ -14,6 +14,9 @@ namespace CodeFirstTask
         {
             using (ShopContext context = new ShopContext())
             {
+                // Дима под Саниным контролем закоммитил
+
+
                 Console.Read();
             }
 
