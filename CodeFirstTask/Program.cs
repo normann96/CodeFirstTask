@@ -14,19 +14,10 @@ namespace CodeFirstTask
         {
             using (ShopContext context = new ShopContext())
             {
-                foreach (var product in context.Products)
-                {
-                    Console.WriteLine(product.Name);
-                }
-
-                //foreach (var category in context.Categories)
-                //{
-                //    Console.WriteLine(category.Name);
-                //}
+                
+                Console.Read();
             }
-
-            Console.WriteLine("done");
-            Console.ReadKey();
+            
         }
     }
 }
