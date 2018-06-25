@@ -14,10 +14,11 @@ namespace CodeFirstTask
         {
             using (ShopContext context = new ShopContext())
             {
-                
                 Console.Read();
             }
-            
+
+
+            Console.ReadKey();
         }
     }
 }
