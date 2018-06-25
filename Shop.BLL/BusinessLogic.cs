@@ -6,6 +6,7 @@ namespace Shop.BLL
 {
     public class BusinessLogic : IDisposable
     {
+        // new commit
         readonly ShopContext _context = new ShopContext();
         public IEnumerable<Product> GetProductsByCategory(string category)
         {
